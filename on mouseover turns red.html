@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>on mouse over changes</h1>
+  <button id="myButton">Click me!</button>
+
+  <script>
+    const button = document.getElementById('myButton');
+    button.addEventListener('mouseover',() => {
+      button.style.backgroundColor ='red';
+   });
+    
+    button.addEventListener('mouseout',() => {
+      button.style.backgroundColor = '';
+  </script>
+</body>
+</html>
