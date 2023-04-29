@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Abbreviate my strings</title>
+</head>
+<body>
+	<label for="input-text">enter text:</label>
+	<input type="text" id="input-text">
+	<button onclick="abbreviate()">Abbreviate</button>
+	<p id="output"></p>
+
+    <script>
+		function abbreviate() {
+			let input = document.getElementById("input-text").value;
+			let words = input.split(" ");
+			let output = " ";
+
+			for (let i = 0; i < words.length; i++) {
+				let word = words[i];
+				if (word.length > 2) {
+					output += word[0] + (word.length - 2) + word[word.length-1] + " ";
+				} else {
+					output += word + " ";
+				}
+			}
+
+			document.getElementById("output").innerHTML = output.trim();
+		}
+    </script>
+</body>
+</html>
+
