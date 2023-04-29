@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> extract string from user <input></title>
+<label for="input">Enter a string:</label>
+<input type="text" id="input" />
+<label for="numChars">Number of characters to extract:</label>
+<input type="number" id="numChars" />
+<button onclick="extractChars()">Extract</button>
+<p id="output"></p>
+
+<script>
+    function extractChars() {
+    // Get the input field and the number of characters to extract
+    const input = document.getElementById("input").value;
+    const numChars = document.getElementById("numChars").value;
+  
+    // Extract the specified number of characters from the input string
+    const output = input.substring(0, numChars);
+  
+    // Display the extracted characters
+    document.getElementById("output").innerHTML = output;
+  }
+</script>
+</head>
+</html>

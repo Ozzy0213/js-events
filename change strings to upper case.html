@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Capitalize String</title>
+  </head>
+  <body>
+    <h1>Capitalize input Strings</h1>
+    <p>Enter to see</p>
+    <input type="text" id="inputString">
+    <button onclick="capitalize()">Capitalize</button>
+    <p>Capitalized string: <span id="outputString"></span></p>
+    
+    <script>
+      function capitalizeString(str) {
+        let words = str.toLowerCase().split(' ');
+      
+        for (let i = 0; i < words.length; i++) {
+          words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+        }
+      
+        return words.join(' ');
+      }
+
+      function capitalize() {
+        let input = document.getElementById('inputString').value;
+        let output = document.getElementById('outputString');
+        output.innerHTML = capitalizeString(input);
+      }
+    </script>
+  </body>
+</html>
